@@ -1,0 +1,871 @@
+/* =========================================================
+   TECHVOLT - RESPONSIVE DESIGN
+   Add this stylesheet LAST so it can override desktop CSS.
+   Intended mainly for USER-FACING pages.
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img,
+svg,
+video {
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+/* ---------- NAVBAR / HEADER ---------- */
+
+@media (max-width: 900px) {
+    .header {
+        width: 100%;
+        min-height: 80px;
+        height: auto;
+        padding: 10px 16px;
+        gap: 14px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .logo-section {
+        flex: 0 0 auto;
+    }
+
+    #logo {
+        max-width: 170px;
+        height: auto;
+    }
+
+    .search-section {
+        flex: 1 1 260px;
+        min-width: 220px;
+        display: flex;
+    }
+
+    #search {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .search-btn {
+        flex: 0 0 45px;
+    }
+
+    .last-section {
+        width: auto;
+        flex: 0 1 auto;
+        gap: 10px;
+    }
+
+    .orders-returns {
+        font-size: 15px;
+    }
+
+    .account img {
+        height: 50px;
+    }
+
+    .nav {
+        min-height: 65px;
+        padding: 6px 10px;
+        gap: 8px;
+    }
+
+    .nav a {
+        flex: 1 1 0;
+        min-width: 0;
+    }
+
+    .nav p {
+        font-size: 15px;
+        margin: 4px 0 0;
+    }
+
+    .nav img {
+        width: 25px;
+    }
+
+    /* Home */
+    .hero {
+        min-height: 65vh;
+    }
+
+    .hero-container {
+        padding: 90px 7%;
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .new-products-container,
+    .all-products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .techvolt-specification-container {
+        flex-wrap: wrap;
+    }
+
+    .specification {
+        flex: 1 1 220px;
+        min-height: 220px;
+        height: auto;
+    }
+
+    /* About */
+    .who-we-are {
+        flex-direction: column;
+    }
+
+    .image-slider {
+        width: 90%;
+        max-width: 700px;
+    }
+
+    .who-content {
+        width: 90%;
+        margin: 20px;
+    }
+
+    .what-we-offer {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 25px;
+    }
+
+    .cards {
+        flex: 1 1 220px;
+        height: auto;
+        min-height: 180px;
+    }
+
+    .cta-container {
+        flex-wrap: wrap;
+    }
+
+    /* Product detail */
+    .product-detail-container {
+        margin: 25px;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .image-container-for-product-detail,
+    .main-info-product {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .main-image-container {
+        width: 100%;
+        max-width: 600px;
+        height: min(55vw, 400px);
+        margin: 0 auto;
+    }
+
+    .product-all-detail-container {
+        width: 100%;
+    }
+
+    /* Cart / checkout */
+    .conatiner-of-product-delivery-orderSummery {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container-of-product {
+        grid-column: 1 / -1;
+    }
+
+    .Checkout-page {
+        width: 100%;
+    }
+
+    .product-checkout-container {
+        grid-template-columns: 1fr;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+
+    /* Profile */
+    .profile-information,
+    .account-overview,
+    .cart-overview,
+    .order-overview,
+    .wishlist-overview {
+        width: 100%;
+    }
+
+    /* Footer */
+    .footer-card-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px;
+    }
+
+    .footer-last-section {
+        gap: 15px;
+    }
+}
+
+
+/* ---------- TABLET / SMALL MOBILE ---------- */
+
+@media (max-width: 700px) {
+    /* Header */
+    .header {
+        padding: 10px 12px;
+        gap: 10px;
+    }
+
+    #logo {
+        max-width: 135px;
+    }
+
+    .search-section {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .last-section {
+        margin-left: auto;
+        gap: 5px;
+    }
+
+    .orders-returns {
+        display: none;
+    }
+
+    .cart img {
+        height: 30px;
+    }
+
+    .wishlist img {
+        height: 36px;
+    }
+
+    .account img {
+        height: 43px;
+    }
+
+    .itemQuantity {
+        font-size: 14px;
+        right: 10px;
+        top: -6px;
+    }
+
+    .itemSavedQuantity {
+        width: 20px;
+        height: 20px;
+        padding: 2px;
+        font-size: 13px;
+        top: -7px;
+        right: -3px;
+    }
+
+    .nav {
+        overflow-x: auto;
+        justify-content: flex-start;
+    }
+
+    .nav a {
+        flex: 0 0 25%;
+        min-width: 80px;
+    }
+
+    .nav p {
+        font-size: 13px;
+    }
+
+    /* Home */
+    .hero {
+        min-height: 55vh;
+    }
+
+    .hero-container {
+        padding: 65px 6%;
+        font-size: 19px;
+        line-height: 1.45;
+    }
+
+    .shop-btn {
+        font-size: 16px;
+    }
+
+    .new-product-title,
+    .techvolt-specification-title,
+    .techvolt-specification-text {
+        font-size: 24px;
+    }
+
+    .new-products-container,
+    .all-products {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+        padding: 5px;
+    }
+
+    .products {
+        margin: 5px;
+        padding: 10px;
+        height: 500px;
+    }
+
+    .products img {
+        height: 150px;
+    }
+
+    .product-name {
+        font-size: 18px;
+    }
+
+    .product-price {
+        font-size: 17px;
+    }
+
+    .product-stock,
+    .product-Out-of-stock {
+        font-size: 13px;
+        margin-left: 5px;
+    }
+
+    .container-for-buttons {
+        gap: 7px;
+        flex-direction: column;
+    }
+
+    .add-to-cart,
+    .add-to-wishlist {
+        width: 100%;
+        margin: 0;
+        padding: 9px 5px;
+        font-size: 14px;
+    }
+
+    /* Category filter */
+    .text-product {
+        font-size: 30px;
+    }
+
+    .select-category {
+        flex-direction: column;
+    }
+
+    .select-category select {
+        width: min(90%, 300px);
+    }
+
+    /* About */
+    .about-header {
+        margin-bottom: 20px;
+        padding: 25px 15px;
+    }
+
+    .heading {
+        font-size: 32px;
+        margin: 10px;
+    }
+
+    .sub-heading {
+        font-size: 19px;
+        margin: 10px;
+    }
+
+    .description-about {
+        font-size: 16px;
+        width: auto;
+    }
+
+    .who-we-are-container {
+        padding: 20px 10px;
+    }
+
+    .image-slider {
+        width: 100%;
+        height: 240px;
+    }
+
+    .who-content {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .heading-con-who {
+        font-size: 25px;
+    }
+
+    .who-desc,
+    .offer-desc {
+        font-size: 16px;
+    }
+
+    .what-we-offer-container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .what-we-offer {
+        padding: 15px;
+    }
+
+    .cards {
+        width: 100%;
+        margin: 8px;
+    }
+
+    .maker-container {
+        padding: 30px 15px;
+    }
+
+    .maker-container h2 {
+        font-size: 24px;
+    }
+
+    .maker-container p {
+        font-size: 17px;
+    }
+
+    .our-mission {
+        margin: 10px;
+        padding: 20px 12px;
+    }
+
+    .our-mission h2 {
+        font-size: 27px;
+    }
+
+    .long-desc-for-our-mission {
+        margin: 15px;
+        font-size: 17px;
+    }
+
+    .short-desc-for-our-mission {
+        font-size: 15px;
+        text-align: center;
+        margin: 0;
+    }
+
+    /* Contact */
+    .contact-header-section,
+    .form-section,
+    .faq-section {
+        width: 100%;
+        padding: 20px 15px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-submit-btn {
+        width: 100%;
+    }
+
+    /* Product detail */
+    .product-detail-container {
+        margin: 15px 10px;
+        gap: 20px;
+    }
+
+    .main-image-container {
+        height: 300px;
+        padding: 12px;
+    }
+
+    .thumbnail-container {
+        flex-wrap: wrap;
+    }
+
+    .product-detail-name {
+        font-size: 27px;
+    }
+
+    .product-detail-price {
+        font-size: 23px;
+    }
+
+    .container-for-btn-qun {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .qun-container {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .container-for-btn-qun .container-for-buttons {
+        width: 100%;
+    }
+
+    /* Cart */
+    .header-of-cart,
+    .header-checkout,
+    .header-MyOrders {
+        margin: 10px 0;
+        padding: 18px 12px;
+    }
+
+    .header-of-cart h2,
+    .header-checkout h2,
+    .header-MyOrders h2 {
+        font-size: 25px;
+    }
+
+    .header-of-cart p,
+    .header-checkout p,
+    .header-MyOrders p {
+        font-size: 17px;
+    }
+
+    .conatiner-of-product-delivery-orderSummery {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        gap: 15px;
+    }
+
+    .container-of-product,
+    .container-of-deliveryOptions,
+    .container-of-orderSummery {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cart-product {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .cart-product .product-cart-img {
+        width: 85px;
+        height: 85px;
+    }
+
+    .product-info {
+        min-width: 0;
+        flex: 1 1 180px;
+    }
+
+    .cart-product-title {
+        font-size: 18px;
+    }
+
+    .cart-product-price {
+        font-size: 19px;
+    }
+
+    .cart-action {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .cart-Quantity-container {
+        width: 140px;
+    }
+
+    .cart-remove-btn {
+        width: 120px;
+        font-size: 14px;
+    }
+
+    .options {
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    /* Checkout */
+    .checkout-product {
+        flex-wrap: wrap;
+    }
+
+    .product-img-check {
+        width: 80px;
+        height: 80px;
+    }
+
+    .saved-addresses {
+        grid-template-columns: 1fr;
+    }
+
+    .city-state-container {
+        flex-direction: column;
+    }
+
+    .city-state-container > * {
+        width: 100%;
+    }
+
+    /* Orders */
+    .my-order,
+    .order-product-section,
+    .order-top,
+    .order-detail-last-section {
+        flex-wrap: wrap;
+    }
+
+    .order-product-info-section {
+        min-width: 0;
+    }
+
+    /* Order detail */
+    .container-ship-add-and-orderSummery {
+        flex-direction: column;
+    }
+
+    .container-for-shipping-address,
+    .container-for-orderSummery,
+    .ordered-items,
+    .payment-detail-container {
+        width: 100%;
+    }
+
+    .order-tracker {
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .tracker-step {
+        min-width: 100px;
+    }
+
+    .order-summery-table,
+    .payment-table {
+        display: block;
+        overflow-x: auto;
+        width: 100%;
+    }
+
+    /* Profile */
+    .hero-of-profile {
+        padding: 25px 15px;
+    }
+
+    .main-profile-heading,
+    .title-profile {
+        font-size: 26px;
+    }
+
+    .user-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-table {
+        width: 100%;
+        display: block;
+        overflow-x: auto;
+    }
+
+    .update-profile-form {
+        width: 95%;
+        max-width: 500px;
+    }
+
+    /* Wishlist */
+    .product-item-container-wishlist {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 12px;
+    }
+
+    .footer-card-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 10px;
+    }
+
+    .footer-card {
+        text-align: center;
+    }
+
+    .desc {
+        width: min(100%, 320px);
+    }
+
+    .contact-container {
+        align-items: flex-start;
+    }
+
+    .footer-last-section {
+        margin: 15px 5px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+
+/* ---------- PHONE ---------- */
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px;
+    }
+
+    #logo {
+        max-width: 115px;
+    }
+
+    .last-section {
+        gap: 2px;
+    }
+
+    .cart img {
+        height: 27px;
+    }
+
+    .wishlist img {
+        height: 32px;
+    }
+
+    .account img {
+        height: 38px;
+    }
+
+    .nav a {
+        min-width: 72px;
+    }
+
+    .nav img {
+        width: 22px;
+    }
+
+    .nav p {
+        font-size: 12px;
+    }
+
+    .hero-container {
+        padding: 50px 5%;
+        font-size: 17px;
+    }
+
+    .new-products-container,
+    .all-products {
+        grid-template-columns: 1fr;
+        padding: 8px;
+    }
+
+    .products {
+        height: auto;
+        min-height: 450px;
+        margin: 5px 0;
+    }
+
+    .products img {
+        height: 180px;
+    }
+
+    .product-name {
+        height: auto;
+        min-height: 50px;
+    }
+
+    .product-short-discription {
+        height: auto;
+        min-height: 50px;
+    }
+
+    .specification {
+        flex-basis: 100%;
+    }
+
+    .image-slider {
+        height: 200px;
+    }
+
+    .main-image-container {
+        height: 250px;
+    }
+
+    .thumbnail-container img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .product-detail-name {
+        font-size: 23px;
+    }
+
+    .product-all-description,
+    .product-detail-desc {
+        font-size: 15px;
+    }
+
+    .cart-product {
+        padding: 10px;
+    }
+
+    .cart-product .product-cart-img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .cart-action {
+        width: 100%;
+    }
+
+    .cart-Quantity-container {
+        width: 100%;
+        max-width: none;
+    }
+
+    .cart-remove-btn {
+        width: 100%;
+    }
+
+    .options {
+        flex-direction: column;
+    }
+
+    .checkout-btn {
+        width: 100%;
+    }
+
+    .footer-card-title {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* ---------- VERY LONG TABLE / CODE CONTENT SAFETY ---------- */
+
+.order-summery-table,
+.payment-table,
+.info-table {
+    max-width: 100%;
+}
+
+@media (max-width: 700px) {
+    table {
+        max-width: 100%;
+    }
+}

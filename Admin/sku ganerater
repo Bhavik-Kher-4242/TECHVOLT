@@ -1,0 +1,10 @@
+$categoryProductsSql = "SELECT COUNT(*) FROM products as total_products WHERE category_id = ?";
+    $categoryProductsStmt = mysqli_prepare($conn, $categorySql);
+    mysqli_stmt_bind_param($categoryProductsStmt, "i", $category_id);
+    mysqli_stmt_execute($categoryProductsStmt);
+    $categoryProductsResult = mysqli_stmt_get_result($categoryProductsStmt);
+    $categoryProductRow = mysqli_fetch_assoc($categoryProductsResult);
+    $totalCategoryProduct = $categoryProductsResult["total_products"];
+    if ($category_id == 1) {
+        $sku = 
+    }
